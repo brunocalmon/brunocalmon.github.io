@@ -1,0 +1,36 @@
+{
+  "name": "devportfolio-template",
+  "version": "1.2.2",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "webpack --mode production && tsc",
+    "dev": "webpack serve --mode development",
+    "watch": "webpack --watch",
+    "tsc": "tsc --project tsconfig.json"
+  },
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "tech",
+    "coding",
+    "dev"
+  ],
+  "author": "Bruno Calmon",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

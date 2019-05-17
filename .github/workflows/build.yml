@@ -1,0 +1,74 @@
+name: Build, Lint, and Deploy
+
+on:
+  push:
+    branches:
+      - master       # Run build and deploy on push to master
+  pull_request:
+    branches:
+      - master       # Run linting on PR targeting master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22' 
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run linting and tests
+      - name: Run linting and tests
+        run: |
+          npm run lint
+          npm test
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'  # Only run on push to master
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Prepare deployment files
+        run: |
+          npm install
+          npm run build
+          
+          rm -rf ./.github
+          rm -f ./README.md
+          rm -rf ./node_modules
+          rm -f ./package-lock.json
+          rm -f ./package.json
+          rm -rf ./src
+          rm -rf ./js/main.js
+          rm -rf ./scss
+          rm -f ./.dttcignore
+          rm -f ./.gitignore
+          rm -f ./tsconfig.json
+          rm -f ./webpack.config.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

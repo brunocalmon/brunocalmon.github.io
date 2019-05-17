@@ -1,0 +1,14 @@
+gulpfile.js
+*-lock.json
+README.md
+.gitignore
+.dttcignore
+libs/
+images/
+**/*/*.min.*
+**/*/*.css
+**/*/*.html
+**/*/*.ico
+node_modules/
+.git/
+dir-to-text/
