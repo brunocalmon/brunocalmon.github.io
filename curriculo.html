@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html style="width: 1654px; height: 2339px;">
+<!--
+A4 Dimensions @ 72 DPI	595 Pixels	842 Pixels
+A4 Dimensions @ 200 DPI	1654 Pixels	2339 Pixels
+A4 Dimensions @ 300 DPI	2480 Pixels	3508 Pixels
+A4 Dimensions @ 400 DPI	3307 Pixels	4677 Pixels
+A4 Dimensions @ 600 DPI	4961 Pixels	7016 Pixels
+A4 Dimensions @ 1200 DPI 9921 Pixels 14031 Pixels 
+-->
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-theme.min.css">
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<!-- <script src="js/jquery-3.1.0.js"></script> -->
+<!-- <script src="js/bootstrap.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/chart.js"></script>
+<!-- <script src="js/chart.min.js"></script> -->
+<script src="js/jsPDF-1.2.60/jspdf.js"></script> 
+<script src="js/meujs.js"></script>
+<style>
+.left-header {
+	height: 150px;
+	padding: 20px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 5px 0;
+}
+
+div {
+	padding: 0 0;
+	margin: 0 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.bar {
+	height: 1px !important;
+	color: black;
+}
+
+span {
+	margin: 0 2px;
+}
+
+.contact {
+	display: inline;
+}
+
+.header {
+	margin-bottom: 40px;
+}
+
+.stamp {
+	position: relative;
+	float: right;
+	top: 15px;
+	height: 150px;
+	width: 150px;
+	border-radius: 100px;
+	background-color: #e5e5e5;
+	font-size: 750%;
+	color: white;
+	text-align: center;
+	/* 	font-family: cursive; */
+	font-weight: bolder;
+	text-shadow: 1px 1px 5px #777;
+	box-shadow: 1px 1px 5px #0e0e0e;
+}
+
+.cargo {
+	font-size: 18px
+}
+
+legend {
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.exp-block {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 20px
+}
+
+.no-mp {
+	margin: 0;
+	padding: 0;
+}
+
+.spc-bottom {
+	margin-bottom: 20px;
+}
+
+#myChart {
+	/* 	width: 200px !important; */
+	/* 	height: 200px!important; */
+	/* 	margin-left: 25%!important; */
+	
+}
+</style>
+</head>
+
+<body class="clearfix" id="body-cv">
+	<div class=""
+		style="padding: 30px; margin: 0;">
+
+		<div class="header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="left-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h2>Bruno Xavier Calmon</h2>
+				<ul class="perfil-detail" style="list-style: none; padding: 0">
+					<li class="cargo">Analista de Sistemas</li>
+					<li class="endereco">Niterói - Rio de Janeiro - RJ</li>
+					<li class="end-complement">Bairro Santana, Rua B., 40 apt. 501
+						bl 1</li>
+					<li>(21) 998658317</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="contact" style="height: 20px;">
+					<span class="glyphicon glyphicon-globe" aria-hidden="true"></span><a
+						href="#">github.com/brunocalmon</a>
+				</div>
+				|
+				<div class="contact" style="height: 20px;">
+					<span class="glyphicon glyphicon-link" aria-hidden="true"></span> <a
+						href="#">linkedin.com/in/bruno-calmon</a>
+				</div>
+				|
+				<div class="contact" style="height: 20px;">
+					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					<a href="#">brunoxaviercalmon@outlook.com</a>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+		<div class="competencias col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding:0 35px 0 45px">
+			<legend>Competências</legend>
+			<div class="panel panel-default">
+			<div class="panel-heading">Experiência com as tecnologias: </div>
+			<div class="panel-body">
+				<li><strong>Back-End:</strong>     Java, Clojure, Python, NodeJs, C#, PHP</li>
+				<li><strong>Front-End:</strong>    HTML/5, CSS3/SASS/LESS, js/jQuery, AngularJS, Bootstrap e Materialize.</li>
+				<li><strong>Testes:</strong>       JUnit, EasyMock, Mockito e Selenium Webdriver.</li>
+				<li><strong>Servidores:</strong>   Jboss e Tomcat</li>
+				<li><strong>Frameworks:</strong>   SpringBoot, Composure, JSF, Hibernate/JPA, PrimeFaces, AngularJS, Spring e MVC.NET.</li>
+				<li><strong>WebServices:</strong>  REST, SOAP</li>
+				<li><strong>Database:</strong>     MongoDB, DynamoDB, Datomic, Riak, Microsoft SQL Server, Mysql e PostgreSQL</li>
+				<li><strong>Versionadores:</strong>Git, SVN e TFS</li>
+			</div>
+			</div>
+		</div>
+		<div class="compet col-xs-4 col-sm-4 col-md-4 col-lg-4" ></div>
+		
+        <div id="meio" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="left-side col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+				<div class="education col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<legend>Formação</legend>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Centro Universitário Plínio Leite</div>
+						<div class="panel-body">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
+								<span class="glyphicon glyphicon-calendar"></span> 01/12 - 01/15
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<span class="glyphicon glyphicon-map-marker"></span> RJ - Niterói
+							</div>
+							<h4>Bacharel em Ciência da Computação</h4>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Universidade Estácio de Sá</div>
+						<div class="panel-body">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
+								<span class="glyphicon glyphicon-calendar"></span> 09/16 - cursando
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<span class="glyphicon glyphicon-map-marker"></span> RJ - Niterói
+							</div>
+							<h4>Ciência de Dados, Big Data Analytics</h4>
+						</div>
+					</div>
+				</div>
+
+				<div class="experience col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<legend>Experiencia</legend>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Desenvolvedor Back-End</div>
+						<div class="panel-body">
+							<h4>B2W Digital</h4>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
+								<span class="glyphicon glyphicon-calendar"></span> 10/16 - atual
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<span class="glyphicon glyphicon-map-marker"></span> RJ - Centro
+							</div>
+
+							<li>
+								Responsável por micro serviços web voltados para soluções críticas de e-commerce (carrinho de compras, pagamentos, fechamento de pedidos e outros), usando recursos da plataforma java e AWS (Kinesis, EC2, Elasticbeanstalk, DynamoDB, SQS, SNS, S3, Lambda) de forma que sejam escaláveis e altamente disponíveis. 
+							</li>
+							<br/>
+							<li>Trabalhamos também com base na metodologia ágil scrum e TDD para garantirmos qualidade no desenvolvimento das aplicações.</li>
+						</div>
+					</div>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">Desenvolvedor Back-End</div>
+						<div class="panel-body">
+							<h4>TO-Brasil</h4>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
+								<span class="glyphicon glyphicon-calendar"></span> 12/15 - 10/16
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<span class="glyphicon glyphicon-map-marker"></span> RJ - Centro
+							</div>
+							<li>Responsável pelo desenvolvimento em aplicações Java nos 
+								frameworks JSF e Springboot. Consultoria e treinamento na 
+								utilização da metodologia TDD(Test-Driven Development).</li>
+								<br/>
+							<li>Obtive com sucesso o certificado de Java Programming
+								(OCPJ) em nome TO-Brasil.</li>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Desenvolvedor Full Stack</div>
+						<div class="panel-body">
+							<h4>Marlin</h4>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin: 0; padding: 0;">
+								<span class="glyphicon glyphicon-calendar"></span> 05/14 - 12/15
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<span class="glyphicon glyphicon-map-marker"></span> RJ - Centro
+							</div>
+							<li>
+									Desenvolvimento em softwares corporativos para web. (fullstack)
+									<br/>
+									Atuante nas linguagens:
+									Backend: C#, Java e PHP 
+									Frontend: HTML5, css, javaScript e Angular
+									DB: SQL
+									<br/>
+									Constante atuação e experiência com aplicações em Drupal.
+							</li>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="right-side col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+				<div class="certificate col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<legend>Certificados</legend>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Oracle</div>
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-left media-middle">
+									<a href="#"> <img class="media-object" src="oracle.jpg"
+										alt="oracle">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Oracle Certified Professional,
+										Java SE 6 Programmer</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Cambridge</div>
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-left media-middle">
+									<a href="#"> <img class="media-object" src="cambridge.png"
+										alt="oracle" width="100">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">Certificado em Inglês de
+										Cambridge, Level A2 (KET)</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="strenghts col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<legend>Cursos</legend>
+					<div class="panel panel-default">
+						<div class="panel-heading">Instituto Cordas</div>
+						<div class="panel-body">Inglês Avançado</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Infnet</div>
+						<div class="panel-body">
+							JAVA: Desenvolvedor JAVA <br /> M20483 -
+							Programming in C# <br /> M20486 - Developing ASP.NET MVC 4 Web
+							Applications
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">Alura</div>
+						<div class="panel-body">
+							Spring MVC <br />
+							JSF e Primefaces <br /> HTML/5, CSS3, JavaScript, Jquery <br />
+							Automação com Less / Sass e Compass
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+		</div>
+		<div class="extras col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding:0 35px 0 45px">
+			<legend>Extra</legend>
+			<div class="panel panel-default">
+					<div class="panel-heading">Senai</div>
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left media-middle">
+								<a href="#"> <img class="media-object" src="senai.png"
+									alt="oracle" width="100">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Olimpíadas do Conhecimento -
+									Firjan - SENAI (Etapa Estadual). Primeiro lugar na fase
+									escolar, representando a unidade Niterói - RJ, modalidade TI.</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div class="extr col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+</body>
+</html>
