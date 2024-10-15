@@ -1,395 +1,259 @@
-<!DOCTYPE html>
-<html style="width: 1654px; height: 2339px;">
-<!--
-A4 Dimensions @ 72 DPI	595 Pixels	842 Pixels
-A4 Dimensions @ 200 DPI	1654 Pixels	2339 Pixels
-A4 Dimensions @ 300 DPI	2480 Pixels	3508 Pixels
-A4 Dimensions @ 400 DPI	3307 Pixels	4677 Pixels
-A4 Dimensions @ 600 DPI	4961 Pixels	7016 Pixels
-A4 Dimensions @ 1200 DPI 9921 Pixels 14031 Pixels 
--->
+<html lang="en">
+
 <head>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-<link rel="stylesheet" type="text/css"
-	href="css/bootstrap-theme.min.css">
-
-<script src="js/jquery-3.1.0.min.js"></script>
-<!-- <script src="js/jquery-3.1.0.js"></script> -->
-<!-- <script src="js/bootstrap.js"></script> -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/chart.js"></script>
-<!-- <script src="js/chart.min.js"></script> -->
-<script src="js/jsPDF-1.2.60/jspdf.js"></script> 
-<script src="js/meujs.js"></script>
-<style>
-.left-header {
-	height: 150px;
-	padding: 20px 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	padding: 0;
-	margin: 5px 0;
-}
-
-div {
-	padding: 0 0;
-	margin: 0 0;
-}
-
-a {
-	text-decoration: none;
-	color: black;
-}
-
-.bar {
-	height: 1px !important;
-	color: black;
-}
-
-span {
-	margin: 0 2px;
-}
-
-.contact {
-	display: inline;
-}
-
-.header {
-	margin-bottom: 40px;
-}
-
-.stamp {
-	position: relative;
-	float: right;
-	top: 15px;
-	height: 150px;
-	width: 150px;
-	border-radius: 100px;
-	background-color: #e5e5e5;
-	font-size: 750%;
-	color: white;
-	text-align: center;
-	/* 	font-family: cursive; */
-	font-weight: bolder;
-	text-shadow: 1px 1px 5px #777;
-	box-shadow: 1px 1px 5px #0e0e0e;
-}
-
-.cargo {
-	font-size: 18px
-}
-
-legend {
-	border-bottom: 2px solid #e5e5e5;
-}
-
-.exp-block {
-	border-bottom: 1px solid #e5e5e5;
-	margin-bottom: 20px
-}
-
-.no-mp {
-	margin: 0;
-	padding: 0;
-}
-
-.spc-bottom {
-	margin-bottom: 20px;
-}
-
-#myChart {
-	/* 	width: 200px !important; */
-	/* 	height: 200px!important; */
-	/* 	margin-left: 25%!important; */
-	
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Xavier Calmon - CV</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 
-<body class="clearfix" id="body-cv">
-	<div class=""
-		style="padding: 30px; margin: 0;">
-
-		<div class="header col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="left-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h2>Bruno Xavier Calmon</h2>
-				<ul class="perfil-detail" style="list-style: none; padding: 0">
-					<li class="cargo">Software Engineering</li>
-					<li class="endereco">Bamberg, Bavaria, Germany</li>
-					<li class="end-complement">Woerthstr. 1C</li>
-					<li>+49 0163 8665134</li>
-				</ul>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="contact" style="height: 20px;">
-					<span class="glyphicon glyphicon-globe" aria-hidden="true"></span><a
-						href="#">github.com/brunocalmon</a>
-				</div>
-				|
-				<div class="contact" style="height: 20px;">
-					<span class="glyphicon glyphicon-link" aria-hidden="true"></span> <a
-						href="#">linkedin.com/in/bruno-calmon</a>
-				</div>
-				|
-				<div class="contact" style="height: 20px;">
-					<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-					<a href="#">brunoxaviercalmon@outlook.com</a>
-				</div>
-			</div>
-		</div>
-	</div>
-		
-		<div class="competencias col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding:0 35px 0 45px">
-			<legend>Competencies</legend>
-			<div class="panel panel-default">
-			<div class="panel-heading">A Brief Known Technologies: </div>
-			<div class="panel-body">
-				<li><strong>Back-End:</strong>      Java, Go, Clojure, Python, NodeJs</li>
-				<li><strong>Frameworks:</strong>    SpringBoot, Compojure, Echo, JSF, Hibernate/JPA</li>
-				<li><strong>Databases:</strong>     MongoDB, DynamoDB, Datomic, Riak, Microsoft SQL Server, Mysql e PostgreSQL</li>
-			</div>
-			</div>
-		</div>
-		<div class="compet col-xs-4 col-sm-4 col-md-4 col-lg-4" ></div>
-		
-        <div id="meio" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div class="left-side col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-				<div class="education col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<legend>Education</legend>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Centro Universitário Plínio Leite</div>
-						<div class="panel-body">
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
-								<span class="glyphicon glyphicon-calendar"></span> 01/12 - 01/15
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<span class="glyphicon glyphicon-map-marker"></span> RJ - Niterói
-							</div>
-							<h4>BS Computer Science</h4>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">University Estácio de Sá</div>
-						<div class="panel-body">
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
-								<span class="glyphicon glyphicon-calendar"></span> 09/16 - freezed
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<span class="glyphicon glyphicon-map-marker"></span> RJ - Niterói
-							</div>
-							<h4>Data Science, Big Data Analytics</h4>
-						</div>
-					</div>
-				</div>
-
-				<div class="experience col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<legend>Professional Experience</legend>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Back-End Developer</div>
-						<div class="panel-body">
-							<h4>Rakuten GmbH</h4>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
-								<span class="glyphicon glyphicon-calendar"></span> 07/19 - Today
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<span class="glyphicon glyphicon-map-marker"></span> Bamberg - Germany
-							</div>
-
-							<li>
-							Responsible for maintaining old systems as well as creating new modern solutions REST-based microservices focused on e-commerce in order to provide scalable and highly available apis.
-							As a team member we had the to renew all applications from a legacy monoliths to a microservices decentralized approach.
-							<br/>
-							Backend: Java, Golang
-							<br/>
-							DB: SQL, MongoDB, Redis
-							<br/>
-							DevOps: Azure Stack, Kubernetes, Docker, Gitlab, New Relic, Kibana
-							<br/>
-							Framworks: Springboot, Echo Framework, Agile
-							</li>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Back-End Developer</div>
-						<div class="panel-body">
-							<h4>B2W Digital</h4>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
-								<span class="glyphicon glyphicon-calendar"></span> 10/16 - 07/19
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<span class="glyphicon glyphicon-map-marker"></span> RJ - Brazil
-							</div>
-
-							<li>
-                                Responsible for micro-web services focused on critical e-commerce solutions (shopping cart, payments, order closing and others), using java and AWS (Kinesis, EC2, Elasticbeanstalk, DynamoDB, SQS, SNS, S3, Lambda ) so that they are scalable and highly available.
-							</li>
-							<br/>
-							<li>We also work on agile scrum methodology and TDD to ensure quality in the development of the applications.</li>
-							<br/>
-							Backend: Java, Golang, NodeJS, Clojure, Python
-							<br/>
-							DB: SQL, MongoDB, DynamoDB, Datomic
-							<br/>
-							DevOps: AWS Stack, Docker, Gitlab, New Relic, Kibana
-							<br/>
-							Framworks: Springboot, Express, Compojure, SCRUM
-						</div>
-					</div>
-					
-					<div class="panel panel-default">
-						<div class="panel-heading">Back-End Developer</div>
-						<div class="panel-body">
-							<h4>TO-Brasil</h4>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-mp">
-								<span class="glyphicon glyphicon-calendar"></span> 12/15 - 10/16
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<span class="glyphicon glyphicon-map-marker"></span> RJ - Brazil
-                            </div>
-                            <li>Responsible for develop Java Web Services using the JSF Framework and Spring Boot. Consulting and coaching in the using of TDD technologies.</li>
-                                    <br/>
-                                <li>Successfully obtained the Java programming certificate (OCPJ) in the TO-Brasil name.</li>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">FullStack Developer</div>
-						<div class="panel-body">
-							<h4>Marlin</h4>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin: 0; padding: 0;">
-								<span class="glyphicon glyphicon-calendar"></span> 05/14 - 12/15
-							</div>
-							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-								<span class="glyphicon glyphicon-map-marker"></span> RJ - Brazil
-							</div>
-							<li>
-                                    Corporative Web Software Development (fullstack)
-									<br/>
-									Backend: C#, Java e PHP 
-									<br/>
-									Frontend: HTML5, css, javaScript e Angular
-									<br/>
-									DB: SQL
-									<br/>
-                                    Constant acting and experience with Drupal applications.
-							</li>
-						</div>
-					</div>
-				</div>
-
-			</div>
-			
-			<div class="right-side col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-				<div class="certificate col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<legend>Professional Certifications</legend>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Oracle</div>
-						<div class="panel-body">
-							<div class="media">
-								<div class="media-left media-middle">
-									<a href="#"> <img class="media-object" src="oracle.jpg"
-										alt="oracle">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Oracle Certified Professional,
-										Java SE 6 Programmer</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Cambridge</div>
-						<div class="panel-body">
-							<div class="media">
-								<div class="media-left media-middle">
-									<a href="#"> <img class="media-object" src="cambridge.png"
-										alt="oracle" width="100">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading"> Cambridge, Level A2 (KET)</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Scrum Alliance, Inc.</div>
-						<div class="panel-body">
-							<div class="media">
-								<div class="media-left media-middle">
-									<a href="#"> <img class="media-object" src="scrum_master.png"
-										alt="oracle" width="100">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading"> Certified ScrumMaster® (CSM®)</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="strenghts col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<legend>Courses</legend>
-					<div class="panel panel-default">
-						<div class="panel-heading">Instituto Cordas</div>
-						<div class="panel-body">Advanced English</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Infnet</div>
-						<div class="panel-body">
-							JAVA: Desenvolvedor JAVA <br /> M20483 -
-							Programming in C# <br /> M20486 - Developing ASP.NET MVC 4 Web
-							Applications
-						</div>
-					</div>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">Alura</div>
-						<div class="panel-body">
-							Spring MVC <br />
-							JSF e Primefaces <br /> HTML/5, CSS3, JavaScript, Jquery <br />
-							Automação com Less / Sass e Compass
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-		</div>
-		<!--<div class="extras col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding:0 35px 0 45px">
-			<legend>Extra</legend>
-			<div class="panel panel-default">
-					<div class="panel-heading">Senai</div>
-					<div class="panel-body">
-						<div class="media">
-							<div class="media-left media-middle">
-								<a href="#"> <img class="media-object" src="senai.png"
-									alt="oracle" width="100">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">Olimpíadas do Conhecimento -
-									Firjan - SENAI (State Stage). First place in schoolar championship, represeting Niterói unit - RJ.</h4>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div>-->
-		<div class="extr col-xs-2 col-sm-2 col-md-2 col-lg-2" >
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="img-container"><img src="https://lh3.googleusercontent.com/pw/AP1GczNYqWkf58bQsxIDLw3A7wB4Nd0bdg9055cAwBpW4NKftScLE8LRuzdsrV61dpHltTGf8e9U7MIT7uwKSkNN5zEI5hKEqrAaH_q_CNW3DsoSbNbhpgmVwO8H3_XcohRjox5OVZLOBhwcbPsrUAnpAy7eqg=w1208-h1208-s-no-gm?authuser=0" alt="github profile" /></div>
+      <div class="title-container">
+        <h1>Bruno Xavier Calmon</h1>
+        <h2>Software Engineering</h2>
+      </div>
+      <div class="empty-container"></div>
+    </header>
+    <div class="main-content">
+      <section class="personal-info">
+        <p>Bamberg, Bavaria, Germany</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+4901638665134">+49 0163 8665134</a></p>
+        <p>
+          <span><i class="fab fa-github"></i> <a href="https://brunocalmon.github.io/#">github</a></span> | <span><i class="fab fa-linkedin"></i> <a href="http://linkedin.com/in/brunocalmon">linkedin</a></span> | <span><i class="fas fa-envelope"></i> <a href="mailto:brunoxaviercalmon@outlook.com">brunoxaviercalmon@outlook.com</a></span>
+        </p>
+      </section>
+      <section class="brief-info">
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="professional-container">
+          <p>Experienced Back-End Developer with a strong background in Java, cloud architecture, and microservices. Skilled in developing scalable and resilient solutions and implementing agile methodologies. Certified Java Professional and Scrum Master with a passion for continuous learning and innovation. Currently at MediaMarkt Saturn GmbH, managing subscription lifecycles, payments, and service provisioning using GCP, Terraform, and Docker.</p>
+          <p>Key achievements:</p>
+          <ul>
+            <li><strong>Document API:</strong> Designed a dynamic PDF contract generation service.</li>
+            <li><strong>Provisioning API V2:</strong> Improved service provider interactions.</li>
+            <li><strong>Sheriff Methodology:</strong> Created a framework for team monitoring and issue response.</li>
+            <li><strong>GCP Migration:</strong> Participation on migration of projects to implement Terraform/Flux and enhanced cloud solutions.</li>     
+            <li><strong>Team Collaboration:</strong> Excel in working with teams, providing assistance, and fostering a comfortable environment for collaboration.</li>
+          </ul>
+          <p>Previous roles at Rakuten and B2W included transitioning architectures, developing microservices, and managing cloud infrastructures, with significant contributions to technology stack transformations and checkout experiences.</p>
+        </div>
+      </section>
+      <section class="known-technologies">
+        <h2 class="section-title">Competencies</h2>
+        <div class="competencies-container">
+          <div class="competencies-column full-width">
+            <p><strong>Highlights:</strong> Developement of java-based microservices, Cloud Architecture-based solution, Best programming practices, Conteinerization through Docker and SCRUM Methodology.</p>
+          <hr />
+          </div>
+          <div class="competencies-column full-width">
+            <strong>More known-technologies:</strong>
+          </div>
+          <div class="competencies-column">
+            <p><strong>Backend Development:</strong> Java, Golang, NodeJS, Clojure,Python</p>
+            <p><strong>Databases:</strong> SQL, MongoDB, DynamoDB, Datomic</p>                
+            <p><strong>Frameworks:</strong> Spring Boot, Express, Compojure, Echo, SCRUM</p>
+          </div>
+          <div class="competencies-column">
+            <p><strong>DevOps Tools:</strong> Cloud Architecture Solutions, Docker, Git, Infrastructure as Code (Terraform, Flux), Monitoring and Observability (including GCP stack and Prometheus stack)</p>
+            <p><strong>Principles and Patterns:</strong> Clean Code, Clean Architecture, SOLID, Design Patterns</p>
+          </div>   
+        </div>   
+      </section>
+      <div class="content-wrapper">
+        <div class="left-side">
+          <section class="work-experience">
+            <h2 class="section-title">Professional Experience</h2>
+              <div class="job">
+                <h3 class="job-title">Back-End Developer</h3>
+                <h4>MediaMarkt Saturn GmbH</h4>
+                <div class="job-details">
+                    <span><i class="fa-regular fa-calendar"></i> 01/21 - Present</span> 
+                    <span><i class="fa-solid fa-location-dot"></i> Ingolstadt, Germany</span>
+                </div>
+                <div class="job-description">
+                <ul>
+                    <li>Overseeing subscription lifecycle management.</li>
+                    <li>Developing and maintaining a robust microservice ecosystem.</li>
+                    <li>Enhancing system monitoring and issue response protocols.</li>
+                    <li>Managing cloud-based solutions and infrastructure.</li>
+                    <li>Fostering team collaboration and providing technical guidance.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job">
+              <h3 class="job-title">Back-End Developer</h3>
+              <h4>Rakuten GmbH</h4>
+              <div class="job-details">
+                  <span><i class="fa-regular fa-calendar"></i> 07/19 - 31/09</span> 
+                  <span><i class="fa-solid fa-location-dot"></i> Bamberg, Germany</span>
+              </div>
+              <div class="job-description">
+                <ul>
+                    <li>Developed and maintained scalable e-commerce platforms using Java and microservices architecture.</li>
+                    <li>Led the complete transformation of the tech stack from Java to Golang, improving system efficiency and performance.</li>
+                    <li>Developed an advanced microservice for image processing, transitioning from a monolithic architecture to an event-driven approach.</li>
+                    <li>Optimized cloud-based solutions for enhanced performance and scalability.</li>
+                    <li>Contributed to re-writing legacy APIs and facilitated their migration to Kubernetes.</li>
+                </ul>
+              </div>
+            </div>          
+            <div class="job">
+              <h3 class="job-title">Back-End Developer</h3>
+              <h4>B2W Digital</h4>
+              <div class="job-details">
+                <span><i class="fa-regular fa-calendar"></i> 10/16 - 07/19</span> 
+                <span><i class="fa-solid fa-location-dot"></i> RJ - Brazil</span>
+              </div>
+              <div class="job-description">
+                <ul>
+                  <li>
+                    Responsible for micro-web services focused on critical
+                    e-commerce solutions (shopping cart, payments, order closing
+                    and others), using java and AWS (Kinesis, EC2,
+                    Elasticbeanstalk, DynamoDB, SQS, SNS, S3, Lambda) so that
+                    they are scalable and highly available.
+                  </li>
+                  <li>
+                    We also work on agile scrum methodology and TDD to ensure
+                    quality in the development of the applications.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="job">
+              <h3 class="job-title">Back-End Developer</h3>
+              <h4>TO-Brasil</h4>
+              <div class="job-details">
+                <span><i class="fa-regular fa-calendar"></i> 12/15 - 10/16</span> 
+                <span><i class="fa-solid fa-location-dot"></i> RJ - Brazil</span>
+              </div>
+              <div class="job-description">
+              <ul>
+                <li>
+                  Responsible for develop Java Web Services using the JSF
+                  Framework and Spring Boot. Consulting and coaching in the
+                  using of TDD technologies.
+                </li>
+                <li>
+                  Successfully obtained the Java programming certificate
+                  (OCPJ) in the TO-Brasil name.
+                </li>
+              </ul>
+              </div>
+            </div>
+            <div class="job">
+              <h3 class="job-title">FullStack Developer</h3>
+              <h4>Marlin</h4>
+              <div class="job-details">
+                <span><i class="fa-regular fa-calendar"></i> 05/14 - 12/15</span> 
+                <span><i class="fa-solid fa-location-dot"></i> RJ - Brazil</span>
+              </div>
+              <div class="job-description">
+              <ul>
+                <li>
+                  Corporative Web Software Development (fullstack)<br />
+                  <strong>Backend:</strong> C#, Java e PHP<br />
+                  <strong>Frontend:</strong> HTML5, css, javaScript e
+                  Angular<br />
+                  <strong>DB:</strong> SQL<br />
+                  Constant acting and experience with Drupal applications.
+                </li>
+              </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="right-side">
+          <section class="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+              <div class="education-geo">
+                <p><i class="fa-regular fa-calendar"></i> 05/23 - In Progress</p>
+                <p><i class="fa-solid fa-location-dot"></i> Remote - BR</p>
+              </div>
+              <h4>MBA - Full Cycle Architecture</h4>
+              <p>FullCycle</p>
+            </div>
+            <div class="education-item">
+              <div class="education-geo">
+                <p><i class="fa-regular fa-calendar"></i> 01/12 - 01/15</p>
+                <p><i class="fa-solid fa-location-dot"></i> Niterói, RJ - BR</p>
+              </div>
+              <h4>Bachelor of Computer Science</h4>
+              <p>Centro Universitário Plínio Leite</p>
+            </div>
+            <div class="education-item">
+              <div class="education-geo">
+                <p><i class="fa-regular fa-calendar"></i> 09/16 - freezed</p>
+                <p><i class="fa-solid fa-location-dot"></i> Niterói, RJ - BR</p>
+              </div>
+              <h4>Data Science, Big Data Analytics</h4>
+              <p>University Estácio de Sá</p>
+            </div>
+            <div class="education-item">
+              <div class="education-geo">
+                <p><i class="fa-regular fa-calendar"></i> Completed: 2010</p>
+                <p><i class="fa-solid fa-location-dot"></i> Niterói, RJ - BR</p>
+              </div>
+              <h4>Technical Degree in Computer Networks</h4>
+              <p>SENAI - National Service for Industrial Training</p>
+            </div>
+          </section>
+          <section class="certifications">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="certificate">
+              <img src="oracle.jpg" alt="Oracle" />
+              <div>
+                <h4>Oracle Certified Professional, Java SE 6 Programmer</h4>
+              </div>
+            </div>
+			      <div class="certificate">
+				      <img src="scrum_master.png" alt="Scrum Master" />
+				      <div>
+				        <h4>Certified ScrumMaster® (CSM®)</h4>
+				      </div>
+			      </div>
+            <div class="certificate">
+              <img src="cambridge.png" alt="Cambridge" />
+              <div>
+                <h4>Cambridge, Level A2 (KET)</h4>
+              </div>
+            </div>
+          </section>
+          <section class="courses">
+            <h2 class="section-title">Courses</h2>
+            <div class="course">
+              <h4>Instituto Cordas</h4>
+              <p>Advanced English</p>
+            </div>
+            <div class="course">
+              <h4>Inlingua Sprachenschule</h4>
+              <p>German A1-B1.1</p>
+            </div>
+            <div class="course">
+              <h4>Infnet</h4>
+              <ul>
+                <li>JAVA: Desenvolvedor JAVA</li>
+                <li>M20483 - Programming in C#</li>
+                <li>
+                  M20486 - Developing <a href="http://ASP.NET">ASP.NET</a> MVC
+                  4 Web Applications
+                </li>
+              </ul>
+            </div>
+            <div class="course">
+              <h4>K21</h4>
+              <ul>
+                <li>ScrumMaster®</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
