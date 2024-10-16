@@ -1,0 +1,274 @@
+/* styles.css */
+
+:root {
+    --primary-color: #004080;
+    /* Navy Blue */
+    --secondary-color: #336699;
+    /* Light Navy Blue */
+    --background-color: #F5F5F5;
+    /* White Smoke */
+    --text-color: #333333;
+    /* Dark Gray */
+    --highlight-color: #FFCC00;
+    /* Light Orange */
+    --container-border: 1px solid #004080;
+    /* Navy Blue */
+    --container-radius: 12px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: var(--box-shadow);
+    border: var(--container-border);
+    border-radius: var(--container-radius);
+    transition: var(--transition);
+}
+
+.professional-container p,
+.professional-container ul,
+.professional-container li,
+.competencies-container p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    /* Adjust as needed */
+}
+
+.professional-container {
+    padding: 0rem 1rem;
+}
+
+.competencies-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for the full-width column */
+    justify-content: space-between;
+    padding: 0rem 1rem;
+}
+
+.competencies-column {
+    width: 45%;
+}
+
+.competencies-column.full-width {
+    width: 100%;
+    margin-bottom: 5px;
+    /* Add spacing between the top column and side columns */
+}
+
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: square;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.header {
+    background: var(--primary-color);
+    color: #FFFFFF;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--secondary-color);
+    border-radius: var(--container-radius) var(--container-radius) 0 0;
+    transition: var(--transition);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.header .img-container {
+    margin: auto;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    grid-column: 1 / 2;
+}
+
+.header .img-container img {
+    border-radius: 40%;
+    width: 100%;
+    /* Ensures the image fills the container */
+    height: auto;
+}
+
+.header .title-container {
+    align-items: center;
+    transition: var(--transition);
+    grid-column: 2/3;
+}
+
+.header .empy-container {
+    grid-column: 3/4;
+}
+
+.main-content {
+    margin-top: 30px;
+    transition: var(--transition);
+}
+
+.brief-info ul {
+    list-style-type: square;
+    padding-left: 20px;
+    /* Add this line for indentation */
+}
+
+
+.section-title {
+    background: var(--primary-color);
+    color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: var(--container-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.section-title span {
+    color: var(--highlight-color);
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.left-side,
+.right-side {
+    width: 48%;
+    transition: var(--transition);
+}
+
+.job,
+.education-item,
+.certificate,
+.course {
+    margin-bottom: 40px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--container-radius);
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.job:hover,
+.education-item:hover,
+.certificate:hover,
+.course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.job-description {
+    padding: 0rem 1rem;
+}
+
+.education-geo {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for the full-width column */
+    justify-content: space-between;
+    padding: 0rem;
+}
+
+.certificate {
+    display: flex;
+    align-items: center;
+}
+
+.certificate img {
+    width: 4rem;
+    margin-right: 15px;
+}
+
+.job-header,
+.education-header,
+.certificate-header,
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.job-title,
+.education-title,
+.certificate-title,
+.course-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin: 0;
+    transition: var(--transition);
+}
+
+.job-company,
+.education-institution,
+.certificate-issuer,
+.course-provider {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.job-details,
+.education-details,
+.certificate-details,
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    color: #4A4A4A;
+    transition: var(--transition);
+}
+
+.job-description,
+.education-description,
+.certificate-description,
+.course-description {
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.job-technologies,
+.education-technologies,
+.certificate-technologies,
+.course-technologies {
+    background-color: #EDEDED;
+    padding: 10px;
+    border-radius: var(--container-radius);
+    transition: var(--transition);
+}
