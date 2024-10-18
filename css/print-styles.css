@@ -1,0 +1,249 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    /* Reduzido para caber melhor no papel */
+    line-height: 1.3;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .header {
+    text-align: center;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    /* Evita quebra de página no meio do cabeçalho */
+  }
+
+  .header .img-container {
+    width: 60px;
+    /* Menor para ajustar ao papel */
+    margin: 10px auto;
+  }
+
+  .header .title-container h1 {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  .header .title-container h2 {
+    margin: 5px 0;
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    margin: 5px 0;
+    border-bottom: 1px solid #333333;
+    page-break-after: avoid;
+    /* Evita quebra de página após o título */
+  }
+
+  .personal-info,
+  .brief-info,
+  .known-technologies,
+  .work-experience,
+  .education,
+  .certifications,
+  .courses {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    /* Evita quebra de página no meio das seções */
+  }
+
+  .job,
+  .education-item,
+  .certificate,
+  .course {
+    margin-bottom: 5px;
+    page-break-inside: avoid;
+    /* Evita quebra de página no meio dos itens */
+  }
+
+  .professional-container,
+  .competencies-container {
+    margin: 5px 0;
+    padding: 0;
+    page-break-inside: avoid;
+    /* Evita quebra de página no meio das seções */
+  }
+
+  .professional-container ul,
+  .competencies-container ul {
+    padding-left: 15px;
+    /* Menor indentação */
+  }
+
+  .job-details,
+  .education-geo {
+    display: block;
+    font-style: normal;
+    color: #333333;
+  }
+
+  .job-details span,
+  .education-geo p {
+    margin: 0;
+  }
+
+  .section-content ul {
+    list-style: disc inside;
+    padding-left: 0;
+  }
+
+  .section-content li {
+    margin-bottom: 3px;
+    /* Menor espaçamento entre itens */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .work-experience h2 {
+    width: 100%;
+  }
+
+  .work-experience {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .job {
+    flex: 1 1 45%;
+    /* Adjust the percentage to fit three items per line */
+    box-sizing: border-box;
+    margin: 1%;
+  }
+
+  /* General Styles */
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  /* Work Experience Section */
+  .work-experience h2 {
+    width: 100%;
+  }
+
+  .work-experience {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .job {
+    flex: 1 1 30%;
+    /* Adjust the percentage to fit three items per line */
+    box-sizing: border-box;
+    margin: 1%;
+  }
+
+  /* Right Side Sections */
+  .right-side {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping of items */
+    justify-content: space-between;
+  }
+
+  .right-side section {
+    flex: 1 1 calc(50% - 2%);
+    /* Adjust the percentage to fit two items per line, accounting for margin */
+    box-sizing: border-box;
+    margin: 1%;
+  }
+
+  /* Education Section */
+  .education .education-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .education .education-geo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .education .education-geo p {
+    margin: 0;
+  }
+
+  /* Certifications Section */
+  .certifications .certificate ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .certifications .certificate li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .certifications .certificate img {
+    width: 50px;
+    /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .certifications .certificate h4 {
+    margin: 0;
+  }
+
+  .certifications .certificate .empty-box {
+    flex-grow: 1;
+  }
+
+  /* Courses Section */
+  .courses .course {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .courses .course-single {
+    margin-bottom: 10px;
+  }
+
+  .courses .course-single ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .courses .course-single ul li {
+    text-align: left;
+  }
+
+}

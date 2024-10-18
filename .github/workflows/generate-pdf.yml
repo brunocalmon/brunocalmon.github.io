@@ -1,0 +1,31 @@
+name: Generate PDF
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libxkbcommon0 libnss3 libxss1 libasound2 fonts-liberation libappindicator3-1 libatk-bridge2.0-0 libatspi2.0-0 libgtk-3-0 libgbm-dev
+
+    - name: Generate PDF
+      uses: ferdinandkeller/html-to-pdf-action@v1
+      with:
+        source-path: './'
+        destination-path: './out/cv.pdf'
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: CV PDF
+        path: ./out/cv.pdf

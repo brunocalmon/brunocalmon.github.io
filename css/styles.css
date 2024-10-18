@@ -76,7 +76,7 @@ h2 {
 }
 
 ul {
-    list-style-type: square;
+    list-style: none;
     padding: 0;
 }
 
@@ -122,7 +122,7 @@ li {
     grid-column: 2/3;
 }
 
-.header .empy-container {
+.header .empty-container {
     grid-column: 3/4;
 }
 
@@ -187,8 +187,17 @@ li {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.job-description {
+.job-description,
+.education-item p,
+.course p,
+.course ul {
     padding: 0rem 1rem;
+}
+
+.education-item h4,
+.education-geo p {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .education-geo {
@@ -199,8 +208,10 @@ li {
     padding: 0rem;
 }
 
-.certificate {
+.certificate ul li {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -209,17 +220,12 @@ li {
     margin-right: 15px;
 }
 
-.job-header,
-.education-header,
-.certificate-header,
-.course-header {
+.course-single {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--secondary-color);
-    transition: var(--transition);
+    text-align: right;
 }
 
 .job-title,
