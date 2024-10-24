@@ -43,13 +43,17 @@ body {
 .professional-container ul,
 .professional-container li,
 .competencies-container p {
-    margin-top: 0;
     margin-bottom: 0.5em;
     /* Adjust as needed */
 }
 
 .professional-container {
-    padding: 0rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.competencies {
+    margin-bottom: 1rem;
 }
 
 .competencies-container {
@@ -70,6 +74,18 @@ body {
     /* Add spacing between the top column and side columns */
 }
 
+.highlight {
+    font-weight: bold;
+    color: #007BFF;
+    /* You can choose a color that fits your design */
+    background-color: rgba(0, 123, 255, 0.1);
+    /* Light background to enhance visibility */
+    padding: 2px 4px;
+    /* Slight padding for better spacing */
+    border-radius: 4px;
+    /* Optional: rounded corners for a modern look */
+}
+
 
 h2 {
     text-align: center;
@@ -77,11 +93,15 @@ h2 {
 
 ul {
     list-style: none;
-    padding: 0;
 }
 
 li {
     margin-bottom: 10px;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .header {
@@ -131,7 +151,19 @@ li {
     transition: var(--transition);
 }
 
-.brief-info ul {
+.personal-info {
+    margin-bottom: 1rem;
+}
+
+.personal-info p {
+    margin: 0.2rem 1rem;
+}
+
+.professional-summary {
+    margin-bottom: 1rem;
+}
+
+.professional-summary ul {
     list-style-type: square;
     padding-left: 20px;
     /* Add this line for indentation */
@@ -160,9 +192,16 @@ li {
     transition: var(--transition);
 }
 
+.left-side {
+    width: 58%;
+}
+
+.right-side {
+    width: 38%;
+}
+
 .left-side,
 .right-side {
-    width: 48%;
     transition: var(--transition);
 }
 
@@ -187,17 +226,23 @@ li {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.job-description,
+.job-brief {
+    margin-bottom: 1rem;
+}
+
+.job-description div {
+    margin-bottom: 1rem;
+}
+
+.job-description ul,
 .education-item p,
 .course p,
 .course ul {
     padding: 0rem 1rem;
 }
 
-.education-item h4,
-.education-geo p {
-    margin-bottom: 0;
-    padding-bottom: 0;
+.job-description ul {
+    list-style: circle;
 }
 
 .education-geo {
@@ -205,7 +250,6 @@ li {
     flex-wrap: wrap;
     /* Allow wrapping for the full-width column */
     justify-content: space-between;
-    padding: 0rem;
 }
 
 .certificate ul li {
@@ -228,14 +272,25 @@ li {
     text-align: right;
 }
 
-.job-title,
+.job-title {
+    display: flex;
+    align-items: center;
+}
+
+.job-title i {
+    margin: 0.5rem;
+}
+
+.job-website {
+    margin-bottom: 0.5rem;
+}
+
 .education-title,
 .certificate-title,
 .course-title {
     font-weight: bold;
     color: var(--primary-color);
     font-size: 1.4rem;
-    margin: 0;
     transition: var(--transition);
 }
 
@@ -254,8 +309,7 @@ li {
 .course-details {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
+    margin-bottom: 1rem;
     font-style: italic;
     color: #4A4A4A;
     transition: var(--transition);

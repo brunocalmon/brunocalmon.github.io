@@ -1,0 +1,57 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Use a more intuitive box-sizing model */
+}
+
+* {
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+body {
+    line-height: 1.5;
+    /* Add accessible line-height */
+    -webkit-font-smoothing: antialiased;
+    /* Improve text rendering */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    /* Improve media defaults */
+    max-width: 100%;
+    /* Ensure media elements fit their container */
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    /* Remove built-in form typography styles */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    /* Avoid text overflows */
+}
+
+#root,
+#__next {
+    isolation: isolate;
+    /* Create a root stacking context */
+}
