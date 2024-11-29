@@ -755,6 +755,11 @@ footer {
     cursor: default;
     font-size: 1.2em;
   }
+
+  li:hover {
+    color: white;
+    background: darken($color: #282828, $amount: 0);
+  }
 }
 
 /*
