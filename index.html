@@ -28,6 +28,12 @@
                 <a href="#about">About</a>
             </li>
             <li>
+                <a href="#professional">Profile</a>
+            </li>
+            <li>
+                <a href="#homelab">Homelab</a>
+            </li>
+            <li>
                 <a href="#experience">Experience</a>
             </li>
             <li>
@@ -49,7 +55,7 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Bruno Calmon</h1>
-            <h2>Backend Software Engineer</h2>
+            <h2>Backend &amp; Platform Engineer</h2>
             <a href="https://drive.google.com/file/d/1KIarWZoz1hQo3roPc_0TDXDiLWM8waZP/view?usp=sharing" target="_blank"
                 class="btn-rounded-white">Download Resume</a>
         </div>
@@ -107,34 +113,127 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="heading">Professional Profile</h2>
+                    <h2 class="heading">Profile</h2>
                 </div>
                 <div class="col-md-8">
                     <p>
-                        <strong>Versatile and results-driven Back-End Developer</strong> with extensive experience
-                        across multiple programming languages, including <strong>Java</strong>, <strong>Golang</strong>,
-                        <strong>NodeJS</strong>, <strong>Clojure</strong>, and <strong>Python</strong>.
+                        Senior backend and platform engineer with nearly a decade of experience designing and
+                        operating high-throughput, cloud-native systems across software houses, large e-commerce
+                        platforms in Brazil and Germany, and now a next-generation SaaS platform for transportation at
+                        Trimble/Transporeon. I have a proven track record owning mission-critical services end-to-end –
+                        from API and data model design through implementation, deployment, and long-term reliability.
                         <br /><br />
-                        Proven ability to adapt to diverse technology stacks and deliver robust, scalable, and resilient
-                        solutions in cloud environments, <strong>microservice</strong> and <strong>event-driven
-                            architectures</strong>.
-                        <br /><br />
-                        Skilled in cloud-based infrastructure, containerization with <strong>Docker</strong>, and
-                        automation with <strong>Terraform</strong> and <strong>FluxCD</strong>. Strong advocate of
-                        <strong>agile methodologies</strong>, with a passion for continuous learning and the ability to
-                        thrive in dynamic, fast-paced environments.
-
+                        I work primarily with <strong>Java</strong> and <strong>Golang</strong> in
+                        <strong>microservice</strong> and <strong>event-driven architectures</strong>, running on
+                        <strong>AWS</strong>, <strong>GCP</strong>, and <strong>Azure</strong> with
+                        <strong>Kubernetes</strong>, <strong>Docker</strong>, <strong>Terraform</strong>, and
+                        <strong>FluxCD</strong>. I care deeply about clean APIs, observability, and developer
+                        experience.
                     </p>
+                    <ul>
+                        <li><strong>Domain focus:</strong> checkout, payments, subscriptions, customer data, and platform
+                            capabilities.</li>
+                        <li><strong>Architecture:</strong> microservices, event-driven patterns, OpenAPI contract-first
+                            APIs, and evolutionary design.</li>
+                        <li><strong>Platform &amp; DX:</strong> shared libraries, bootstrap projects, standardized
+                            logging, error handling, CI/CD pipelines, and a GitOps-driven homelab where I validate new
+                            ideas under realistic conditions.</li>
+                        <li><strong>AI-augmented development:</strong> practical use of MCP servers and agentic
+                            workflows to accelerate delivery, keep codebases consistent, and improve developer
+                            productivity.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #professional -->
 
+    <div id="homelab" class="background-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">Homelab</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Outside of work I run a <strong>three-node homelab</strong> on tiny PCs that I treat like a
+                        production environment. It’s where I prototype ideas in <strong>infrastructure, Kubernetes,
+                            GitOps, and platform engineering</strong> before bringing them into my day-to-day work.
+                    </p>
+                    <ul>
+                        <li><strong>Cluster &amp; virtualization:</strong> three <strong>Proxmox</strong> nodes running
+                            a mix of VMs and LXC containers. A dedicated <strong>pfSense</strong> VM acts as the
+                            perimeter firewall. The plan is to manage the Proxmox layer itself with
+                            <strong>OpenTofu (Terraform)</strong> so the whole lab can be rebuilt from code.</li>
+                        <li><strong>Kubernetes layer:</strong> a <strong>highly available k3s cluster</strong> with one
+                            node scheduled on each Proxmox host (via LXC), so I can survive single-node failures without
+                            losing workloads.</li>
+                        <li><strong>GitOps &amp; operations:</strong> the k3s cluster is managed with
+                            <strong>FluxCD</strong> and a GitOps repository where I define cluster topology, base
+                            services, applications, and policies declaratively. Secrets and sensitive values are
+                            encrypted; changes are rolled out automatically from Git, not from my laptop.</li>
+                        <li><strong>Networking &amp; security:</strong> access to the homelab is only possible over
+                            <strong>OpenVPN</strong> and a strict local ruleset enforced by pfSense. I regularly test
+                            failure scenarios (node loss, misconfigurations) to keep the setup resilient and
+                            recoverable.</li>
+                    </ul>
+                    <p>
+                        This setup gives me a permanent sandbox for <strong>HA design, observability, incident
+                            handling, and secure networking</strong> on real hardware—not just in the cloud console—and
+                        keeps my platform skills sharp beyond what I do 9–5.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #homelab -->
+
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="January 2021 – Current">
+            <div data-date="February 2025 – Current">
+                <h3>Trimble Inc.</h3>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/company/trimble-inc/">Linkedin Profile</a>
+                </span>
+                <h4>Senior Software Engineer</h4>
+                <p>
+                    I’m part of Trimble’s Next-Gen MDM platform team, building an internal SaaS that connects newly
+                    acquired businesses into a single, consistent view of people and relationships. The first major
+                    adopter is <strong>Transporeon</strong> – a transportation management platform with a network of
+                    150,000+ carriers and 1,400+ shippers covering ~110,000 transports per day and ~€55B in freight
+                    annually – and the platform is designed to onboard additional acquisitions in the same way.
+                    <br /><br />
+                    My focus is on making those organizations feel like one company from a data and integration
+                    perspective, while their systems remain independent and operational.
+                </p>
+                <ul>
+                    <li><strong>Domain &amp; services ownership:</strong> Own the design and implementation of
+                        relationship and user lifecycle services and processors for the MDM platform, including APIs and
+                        internal event processors.</li>
+                    <li><strong>Event-driven integration:</strong> Designed and implemented an asynchronous integration
+                        model using the <strong>Kafka outbox pattern</strong> with a MongoDB connector, eliminating
+                        direct REST coupling between services and enabling reliable internal communication at high
+                        scale.</li>
+                    <li><strong>Immutable, versioned data model:</strong> Implemented an immutable, versioned data model
+                        in <strong>MongoDB</strong> with cursor-based pagination instead of offsets, so we can safely
+                        historize every change and handle growing volumes from Transporeon’s network and future
+                        acquisitions from day one.</li>
+                    <li><strong>Infrastructure ownership:</strong> Responsible for the infrastructure of these services
+                        end-to-end – from Kubernetes deployments and CI/CD pipelines to monitoring and incident
+                        handling – ensuring the platform can sustain increasing daily load as more business units and
+                        carriers are onboarded.</li>
+                </ul>
+                <p>
+                    <strong>Technologies used:</strong> Java, Spring Boot, Kafka (outbox pattern), MongoDB
+                    (versioned/cursor-paginated), Kubernetes, CI/CD tooling, event-driven patterns, AI-augmented
+                    development workflows.
+                </p>
+            </div>
+
+            <div data-date="February 2021 – February 2025">
                 <h3>MediaMarkt Saturn GmbH</h3>
                 <i class="fa-solid fa-arrow-right"></i>
                 <span>
@@ -419,7 +518,7 @@
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>FullCycle</h3>
-            <span class="education-date">May 2023 - Dec 2024 (In Progress)</span>
+            <span class="education-date">May 2023 - Nov 2024</span>
             <h4>MBA - Full Cycle Architecture</h4>
             <div>
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
