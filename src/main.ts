@@ -65,7 +65,10 @@ if (leadDownSpan) {
 // Create timeline
 const experienceTimeline = document.getElementById('experience-timeline');
 if (experienceTimeline) {
-  const userContent = experienceTimeline.querySelectorAll('div');
+  const userContent = Array.from(experienceTimeline.children).filter(
+    (content): content is HTMLDivElement =>
+      content instanceof HTMLDivElement && content.hasAttribute('data-date'),
+  );
   userContent.forEach(content => {
     content.classList.add('vtimeline-content');
     const timelinePoint = document.createElement('div');
@@ -114,18 +117,5 @@ if (mobileMenuClose) {
   mobileMenuClose.addEventListener('click', () => {
     document.querySelector('header')?.classList.remove('active');
     document.querySelector('body')?.classList.remove('active');
-  });
-}
-
-// Load additional projects
-const viewMoreProjects = document.getElementById('view-more-projects');
-if (viewMoreProjects) {
-  viewMoreProjects.addEventListener('click', (e) => {
-    e.preventDefault();
-    viewMoreProjects.style.display = 'none'; // Hide the button
-    const moreProjects = document.getElementById('more-projects');
-    if (moreProjects) {
-      moreProjects.style.display = 'block'; // Show additional projects
-    }
   });
 }

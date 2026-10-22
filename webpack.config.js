@@ -48,6 +48,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.scss'],
   },
+  devServer: {
+    static: {
+      directory: __dirname,
+    },
+    port: 8080,
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '../css/styles.css',  // Output CSS file in css folder

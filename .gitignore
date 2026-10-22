@@ -2,3 +2,5 @@ node_modules/
 js/*.js
 css/*.css
 !css/bootstrap.min.css
+.dev-server.pid
+.dev-server.log

@@ -374,6 +374,7 @@ footer {
     font-size: 2.25em;
     margin-bottom: 15px;
   }
+
 }
 
 #lead-overlay {
@@ -608,6 +609,28 @@ footer {
   h2 {
     color: $heading;
     margin-bottom: 50px;
+  }
+}
+
+#certifications {
+  padding: 50px 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid $border;
+
+  h2 {
+    color: $heading;
+    margin-bottom: 50px;
+  }
+
+  .certification-block {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+  }
+
+  .certification-block h3 {
+    float: none;
+    line-height: 1.4;
   }
 }
 

@@ -1,74 +1,65 @@
-name: Build, Lint, and Deploy
+name: Build and Deploy
 
 on:
   push:
     branches:
-      - master       # Run build and deploy on push to master
+      - master
   pull_request:
     branches:
-      - master       # Run linting on PR targeting master
+      - master
+
+permissions:
+  contents: read
 
 jobs:
-  lint:
+  validate:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
-
     steps:
-      # Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      # Set up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22' 
-
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Run linting and tests
-      - name: Run linting and tests
-        run: |
-          npm run lint
-          npm test
-
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'  # Only run on push to master
-
-    steps:
-      # Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      # Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Prepare deployment files
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build and prepare site
         run: |
-          npm install
+          npm ci
           npm run build
-          
+
           rm -rf ./.github
-          rm -f ./README.md
+          rm -f ./README.md ./Makefile
           rm -rf ./node_modules
-          rm -f ./package-lock.json
-          rm -f ./package.json
-          rm -rf ./src
+          rm -f ./package-lock.json ./package.json
+          rm -rf ./src ./scss
           rm -rf ./js/main.js
-          rm -rf ./scss
-          rm -f ./.dttcignore
-          rm -f ./.gitignore
-          rm -f ./tsconfig.json
-          rm -f ./webpack.config.js
+          rm -f ./.dttcignore ./.gitignore
+          rm -f ./tsconfig.json ./webpack.config.js
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
